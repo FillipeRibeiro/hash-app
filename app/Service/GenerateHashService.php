@@ -10,8 +10,8 @@ class GenerateHashService
 
         do {
             $key = $this->generateRandomString();
-            $wordhash = $inputText . $key;
-            $hash = md5($wordhash);
+            $wordConcat = $inputText . $key;
+            $hash = md5($wordConcat);
             $countable++;
         } while (substr($hash, 0, 4) !== '0000');
 
@@ -19,8 +19,8 @@ class GenerateHashService
             'key' => $key,
             'hash' => $hash,
             'try' => $countable,
-            'word_hash' => $wordhash,
-            'Input_string' => $inputText,
+            'word_concat' => $wordConcat,
+            'input_string' => $inputText,
         ];
     }
 
