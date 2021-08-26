@@ -31,9 +31,9 @@ class HashController extends Controller
     {
         $filterAttempts = request()->attempts;
 
-        $hashes = HashInfo::select("id as numero_bloco, batch, string, key");
+        $hashes = HashInfo::select("id as numero_bloco", "batch", "input_string as string", "key as chave");
         if (!is_null($filterAttempts)) {
-            $hashes->where('try' <= $filterAttempts);
+            $hashes->where('try', '<=', $filterAttempts);
         }
         return $hashes->paginate();
     }
