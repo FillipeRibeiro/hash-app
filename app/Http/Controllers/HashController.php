@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\HashInfo;
-use App\Service\GenerateHashService;
 
 class HashController extends Controller
 {

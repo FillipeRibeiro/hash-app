@@ -14,6 +14,8 @@ Passos:
 - Um arquivo `docker-compose.yml` cria um server php + nginx e banco de dados Mysql para uso em desenvolvimento, apenas use o comando `docker-compose up`. Para isso é preciso que o docker compose esteja devidamente instalado na maquina.
 - Para rodar as migrations use o comando `php artisan migrate`.
 
+Recomenda-se usar um banco local e fazer a conexão local para melhor experiência.
+
 ### Rotas
 A aplicação possui duas rotas. Uma para gerar a hash e outra para listar todas as hashes geradas via linha de comando.
 
